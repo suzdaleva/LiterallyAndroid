@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_up_title">Создание аккаунта</string>
+    <string name="sign_in_title">Вход в аккаунт</string>
+    <string name="username_hint">Ваше имя</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="sign_up_button_text">Создать аккаунт</string>
+    <string name="sign_up_with_google_button_text">Создать аккаунт с Google</string>
+    <string name="sign_in_button_text">Войти</string>
+    <string name="sign_in_with_google_button_text">Войти с Google</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="agreement_body_first">Регистрируясь, вы соглашаетесь с</string>
+    <string name="terms_of_service">условиями обслуживания</string>
+    <string name="agreement_body_second">и</string>
+    <string name="privacy_policy">политикой конфиденциальности</string>
+    <string name="already_have_account">У вас уже есть аккаунт?</string>
+    <string name="do_not_have_account">У вас нет аккаунта?</string>
+    <string name="not_verified_error_snackbar_message">Пользователь не верифицирован. Код верификации отправлен на вашу электронную почту. Введите его.</string>
+
+    <!--verification-->
+    <string name="verification_title">Подтверждение почты</string>
+    <string name="verification_description">Мы отправили письмо с кодом активации на вашу почту %1$s</string>
+    <string name="continue_button_text">Далее</string>
+    <string name="verification_code_hint">Код активации</string>
+    <string name="did_not_receive_code">Не получили код?</string>
+    <string name="code_success_description">Верный код</string>
+    <string name="code_error_description">Неверный код, пожалуйста, попробуйте ещё раз</string>
+    <string name="resend">Отправить ещё раз</string>
+    <string name="resend_timer">Отправить ещё раз через %1$s</string>
+    <string name="new_code_sent_snackbar_message">Новый код отправлен на вашу электронную почту</string>
+
+    <!--reset password-->
+    <string name="forgot_password_title">Забыли пароль?</string>
+    <string name="forgot_password_description">Мы отправим вам письмо для сброса пароля.</string>
+    <string name="submit_button_text">Отправить</string>
+    <string name="navigate_back_to_login">Вернуться к странице входа</string>
+    <string name="check_email_title">Проверьте почту</string>
+    <string name="reset_password_code_hint">Код сброса пароля</string>
+    <string name="check_email_description">Мы отправили письмо на адрес %1$s.&#10;&#10;Пожалуйста, проверьте его (и папку со спамом на всякий случай) на наличие письма от Literally.</string>
+    <string name="resent_password_code_hint">Код подтверждения</string>
+    <string name="reset_password_title">Сброс пароля</string>
+    <string name="new_password_hint">Новый пароль</string>
+    <string name="repeat_new_password_hint">Повторите новый пароль</string>
+    <string name="reset_password_button_text">Сбросить пароль</string>
+
+    <!--errors-->
+    У test@gmail.com есть учетная запись Literally, подключенная к Google. Пожалуйста, продолжите аутентификацию Google.
+    <string name="invalid_email_format_error">Неверный формат адреса электронной почты. Пожалуйста, укажите действительный адрес электронной почты.</string>
+    <string name="email_registered_with_google_error">Этот адрес электронной почты уже зарегистрирован с помощью Google. Пожалуйста, выполните вход c Google.</string>
+    <string name="invalid_password_format_error">Пароль должен быть длиной не менее 9 символов и содержать как минимум одну цифру, заглавную и строчную букву.</string>
+    <string name="username_already_taken_error">Это имя пользователя уже занято</string>
+    <string name="email_already_registered_error">Этот адрес электронной почты уже зарегистрирован</string>
+    <string name="invalid_credentials_snackbar_message">Неверное имя пользователя или пароль</string>
+    <string name="email_already_registered_with_google_snackbar_message">Этот адрес электронной почты уже зарегистрирован с паролем. Вы можете войти с паролем или сбросить его.</string>
+    <string name="google_play_services_snackbar_message">Сервисы Google Play в настоящее время недоступны или требуют обновления</string>
+    <string name="invalid_code_error">Неверный код</string>
+    <string name="code_expired_error">Срок действия кода истёк</string>
+    <string name="user_not_found_error">Пользователь не найден</string>
+    <string name="user_already_verified_error">Пользователь уже подтверждён, пожалуйста, войдите в систему</string>
+    <string name="passwords_do_not_match_error">Пароли не совпадают</string>
+</resources>

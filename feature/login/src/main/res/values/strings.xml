@@ -1,0 +1,60 @@
+<resources>
+    <string name="sign_up_title">Create your account</string>
+    <string name="sign_in_title">Log into your account</string>
+    <string name="username_hint">Your name</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_up_button_text">Sign up</string>
+    <string name="sign_up_with_google_button_text">Sign up with Google</string>
+    <string name="sign_in_button_text">Log in</string>
+    <string name="sign_in_with_google_button_text">Log in with Google</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="agreement_body_first">By signing up you agree to the</string>
+    <string name="terms_of_service">terms of service</string>
+    <string name="agreement_body_second">and</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="do_not_have_account">Do not have an account?</string>
+    <string name="not_verified_error_snackbar_message">User is not verified. Verification code is sent to your email. Please, enter it.</string>
+
+    <!--verification-->
+    <string name="verification_title">Verify your email</string>
+    <string name="verification_description">We’re sent an email with an activation code to your email %1$s</string>
+    <string name="continue_button_text">Continue</string>
+    <string name="verification_code_hint">Verification code</string>
+    <string name="did_not_receive_code">Didn’t receive code?</string>
+    <string name="code_success_description">Correct code</string>
+    <string name="code_error_description">Wrong code, please try again</string>
+    <string name="resend">Resend</string>
+    <string name="resend_timer">Resend in %1$s</string>
+    <string name="new_code_sent_snackbar_message">New code sent to your email</string>
+
+    <!--reset password-->
+    <string name="forgot_password_title">Forgot password</string>
+    <string name="forgot_password_description">We will send you an email to reset your password</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="navigate_back_to_login">Navigate back to login</string>
+    <string name="check_email_title">Check your email</string>
+    <string name="reset_password_code_hint">Password reset code</string>
+    <string name="check_email_description"><![CDATA[We’ve send an email to the address <b>%1$s.</b><br><br>Please check it (and your spam folder just in case) for an email from Literally]]></string>
+    <string name="resent_password_code_hint">Verification code</string>
+    <string name="reset_password_title">Reset password</string>
+    <string name="new_password_hint">New password</string>
+    <string name="repeat_new_password_hint">Repeat new password</string>
+    <string name="reset_password_button_text">Reset password</string>
+
+    <!--errors-->
+    <string name="invalid_email_format_error">Invalid email format</string>
+    <string name="email_registered_with_google_error">This email has a Literally account connected with Google, please continue with Google Authentication</string>
+    <string name="invalid_password_format_error">Password must be at least 9 characters long and contain at least one digit, uppercase and lowercase character</string>
+    <string name="username_already_taken_error">This username is already taken</string>
+    <string name="email_already_registered_error">This email is already registered</string>
+    <string name="invalid_credentials_snackbar_message">Invalid credentials</string>
+    <string name="email_already_registered_with_google_snackbar_message">This email is already registered with password. You can log in with password or reset it.</string>
+    <string name="google_play_services_snackbar_message">Google play services is currently unavailable or requires update</string>
+    <string name="invalid_code_error">Invalid code</string>
+    <string name="code_expired_error">Code expired</string>
+    <string name="user_not_found_error">User is not found</string>
+    <string name="user_already_verified_error">User is already verified, please log in</string>
+    <string name="passwords_do_not_match_error">Passwords do not match</string>
+</resources>
