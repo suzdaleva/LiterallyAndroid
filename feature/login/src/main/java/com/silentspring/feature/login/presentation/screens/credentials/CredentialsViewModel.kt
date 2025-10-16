@@ -74,7 +74,6 @@ class CredentialsViewModel @Inject constructor(
     }
 
     fun handleGoogleSignIn(result: GetCredentialResponse) = viewModelScope.launch {
-
         val credential = result.credential
 
         if (credential is CustomCredential) {
@@ -199,9 +198,12 @@ class CredentialsViewModel @Inject constructor(
             verifyGoogleIdTokenUseCase(googleIdTokenCredential.idToken)
             mutableSideEffect.emit(SideEffect.LoginSuccess)
         } catch (throwable: Throwable) {
-            if (throwable is NetworkException && throwable.status == 409) {
-                mutableSideEffect.emit(SideEffect.ShowMessage(messageRes = R.string.email_already_registered_with_google_snackbar_message))
-            }
+            val sideEffect =
+                SideEffect.ShowMessage(messageRes = R.string.email_already_registered_with_google_snackbar_message)
+                    .takeIf {
+                        throwable is NetworkException && throwable.status == 409
+                    } ?: SideEffect.CommonError
+            mutableSideEffect.emit(sideEffect)
         }
     }
 

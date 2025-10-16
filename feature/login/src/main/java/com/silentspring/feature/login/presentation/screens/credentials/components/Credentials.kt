@@ -28,6 +28,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.ImeAction
@@ -44,6 +46,7 @@ import com.silentspring.uikit.components.LiterallyTypography
 import com.silentspring.uikit.components.OutlinedButton
 import com.silentspring.uikit.components.OutlinedTextField
 import com.silentspring.uikit.components.PasswordTextField
+import com.silentspring.uikit.components.primaryWhite
 import com.silentspring.uikit.utils.drawCustomIndicatorLine
 
 @Composable
@@ -148,12 +151,20 @@ internal fun Credentials(
                         onCheckedChange = { onStateChanged(state.copy(isPolicyChecked = it)) }
                     )
                 } else {
+
                     Text(
                         text = buildAnnotatedString {
                             withLink(
-                                LinkAnnotation.Clickable(tag = "Forget password") {
-                                    onForgotPasswordClick()
-                                }) {
+                                link = LinkAnnotation.Clickable(
+                                    tag = "Forget password",
+                                    styles = TextLinkStyles(
+                                        style = SpanStyle(color = primaryWhite)
+                                    ),
+                                    linkInteractionListener = {
+                                        onForgotPasswordClick()
+                                    }
+                                )
+                            ) {
                                 append(stringResource(R.string.forgot_password))
                             }
                         },

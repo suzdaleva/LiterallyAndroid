@@ -78,7 +78,7 @@ fun BooksList(
                         HazeProgressive.verticalGradient(startIntensity = 1f, endIntensity = 0f)
                 }
         )
-        Header()
+        Header(state.currentFolder)
         Box(
             modifier = Modifier
                 .align(alignment = Alignment.BottomCenter)
@@ -157,7 +157,7 @@ fun FolderItem(item: FolderItem) {
 
 
 @Composable
-fun Header() {
+fun Header(currentFolder: String) {
     Box(
         modifier = Modifier
             .height(160.dp)
@@ -178,7 +178,7 @@ fun Header() {
             )
             Text(
                 modifier = Modifier.padding(top = 8.dp),
-                text = stringResource(R.string.storage_folder, "/storage/emulated/0"),
+                text = stringResource(R.string.storage_folder, currentFolder),
                 style = LiterallyTypography.titleSmall
             )
         }

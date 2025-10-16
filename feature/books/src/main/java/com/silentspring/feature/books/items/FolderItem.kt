@@ -7,4 +7,4 @@ data class FolderItem(
     val filesCount: Int
 )
 
-fun FolderBusiness.toItem() = FolderItem(title = title, filesCount = filesCount)
+fun FolderBusiness.toItem() = FolderItem(title = title, filesCount = files.size)

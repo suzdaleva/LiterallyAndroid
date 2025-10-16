@@ -4,7 +4,14 @@ import com.silentspring.data.books.domain.model.FolderBusiness
 
 internal data class FolderDto(
     val title: String = "",
-    val filesCount: Int = 0
+    val files: List<FileDto> = emptyList(),
+    val folders: List<FolderDto> = emptyList()
 )
 
-internal fun FolderDto.toBusiness() = FolderBusiness(title = title, filesCount = filesCount)
+internal fun FolderDto.toBusiness(): FolderBusiness {
+    return FolderBusiness(
+        title = title,
+        files = files.map { it.toBusiness() },
+        folders = folders.map { it.toBusiness() }
+    )
+}
