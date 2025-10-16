@@ -2,10 +2,8 @@ package com.silentspring.data.authorization.domain.usecase
 
 import com.silentspring.storage.api.UserPreferencesRepository
 import javax.inject.Inject
-import javax.inject.Singleton
 
 
-@Singleton
 class UpdateTokensUseCase @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository
 ) {

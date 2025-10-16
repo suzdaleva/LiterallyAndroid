@@ -6,14 +6,18 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.Text
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -30,10 +34,12 @@ import com.silentspring.uikit.components.LiterallyTheme
 import com.silentspring.literally.navigation.MainNavHost
 import com.silentspring.literally.navigation.Root
 import com.silentspring.literally.navigation.navigateToRoute
+import com.silentspring.uikit.components.LiterallyTypography
 import com.silentspring.uikit.components.LocalSnackbarController
 import com.silentspring.uikit.components.ObserveAsEvents
 import com.silentspring.uikit.components.SnackbarController
 import com.silentspring.uikit.components.primaryBlack
+import com.silentspring.uikit.components.primaryWhite
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -100,18 +106,37 @@ class MainActivity : ComponentActivity() {
                         Box(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(top = 20.dp),
+                                .padding(top = 40.dp)
+                                .padding(horizontal = 20.dp),
                             contentAlignment = Alignment.TopCenter
                         ) {
-                            SnackbarHost(hostState = snackbarHostState)
+                            SnackbarHost(
+                                hostState = snackbarHostState,
+                                snackbar = { data ->
+                                    Box(
+                                        modifier = Modifier
+                                            .background(
+                                                color = Color(0xFF212320),
+                                                shape = RoundedCornerShape(7.dp)
+                                            )
+                                            .fillMaxWidth()
+                                    ) {
+                                        Text(
+                                            modifier = Modifier.padding(16.dp),
+                                            text = data.visuals.message,
+                                            style = LiterallyTypography.titleSmall,
+                                            color = primaryWhite
+                                        )
+                                    }
+                                }
+                            )
                         }
                     },
                     modifier = Modifier.fillMaxSize(),
                     containerColor = primaryBlack
                 ) { innerPadding ->
                     MainNavHost(
-                        modifier = Modifier
-                            .padding(innerPadding),
+                        modifier = Modifier.padding(innerPadding),
                         navController = navController
                     )
                 }

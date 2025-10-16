@@ -19,11 +19,9 @@ internal class BooksRepositoryImpl @Inject constructor() : BooksRepository {
         val listFiles = file.listFiles(SupportedFilesFilter)
 
         listFiles?.forEach { file ->
-            file.listFiles()?.size
 
             val fileDto = FolderBusiness(
-                title = file.name,
-                filesCount = file.listFiles()?.size ?: 0
+                title = file.name
             )
 
             result.add(fileDto)
